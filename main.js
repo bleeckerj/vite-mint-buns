@@ -11,7 +11,7 @@ document.querySelector('#buns').innerHTML = `
 <div id="containerTop">
   <div id="bun">
     <div id="main">
-      <div id="bun-top"><img src="images/bun-top.png" style="width:100%;padding-bottom:.2em" /></div>
+      <div id="bun-top"><img src="/images/bun-top.png" style="width:100%;padding-bottom:.2em" /></div>
       <div style=""><span class="hatchshow_temp"
           style="display:block;margin-bottom:0.2em;line-height:93.5px;height:130.9px;"><span
             class="hsjs"
@@ -28,7 +28,7 @@ document.querySelector('#buns').innerHTML = `
           style="display:block;margin-bottom:0.2em;line-height:16px;height:22.4px;"><span class="hsjs"
             style="white-space: pre; font-size: 32px; visibility: visible;">(enter &amp; backspace
             work)</span></span></div>
-      <div id="bun-bottom"><img src="images/bun-bottom.png" style="width:100%"></div>
+      <div id="bun-bottom"><img src="/images/bun-bottom.png" style="width:100%"></div>
     </div>
   </div>
 </div>
