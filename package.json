@@ -2,6 +2,10 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
