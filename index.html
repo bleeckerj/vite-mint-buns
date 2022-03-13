@@ -34,7 +34,13 @@
     <!-- this is the pattern to make module functions available for vanilla JS -->
     <script type="module">
       import { tokenUri } from "/public/js/blockchain.js";
+      import { connectWallet } from "/public/js/blockchain.js";
+      import { checkConnection } from "/public/js/blockchain.js";
+      import { isUnlocked } from "/public/js/blockchain.js";
       window.tokenUri = tokenUri;
+      window.connectWallet = connectWallet;
+      window.checkConnection = checkConnection;
+      window.isUnlocked = isUnlocked;
     </script>
     <script type="module">
       export async function contractUri() {
@@ -75,6 +81,8 @@
   
   </head>
   <body id="bbody">
+    <!-- <button id="connectWallet" onClick="checkConnection();">Connect Wallet</button> -->
+
     <!-- <button id="foo"
           class="jscolor {valueElement:'chosen-value', value:bgColor, width:485,height:300, position:'top', onFineChange:'updateBGColor(this.toHEXString())'}">Pick
           Background Color</button>
@@ -84,8 +92,13 @@
              -->
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
+
     <div id="buns"></div>
-    <div id="button"></div>
+    <div id="connect_div"></div>
+
+    <div id="bun_controls"></div>
+
+    <!-- <div id="button"></div> -->
     <!-- <div id="like_button"></div> -->
 <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->

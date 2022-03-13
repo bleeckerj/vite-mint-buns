@@ -32,8 +32,11 @@ document.querySelector('#buns').innerHTML = `
     </div>
   </div>
 </div>
+`
+document.querySelector('#bun_controls').innerHTML = `
 <div id="containerBottom">
   <div id="controls">
+
     <div class="mobileShow">
       <input id="mobileKeyboardKludge" type="text" value="Tap Here to Type" onfocus="keyboardFocus();">
     </div>
@@ -143,10 +146,23 @@ document.querySelector('#mint_a_bun').innerHTML = `
 <button style="background:rgba(255,255,255,0.5);" onclick="window.tokenUri();"><span
 class="emoji">&#x1F4B8</span>Mint Bun</button>
 `
+if (isUnlocked() === false) {
+  console.log(document.querySelector('#controls'));
+
+  document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" onClick="checkConnection();">Connect Wallet</button>');
+
+  document.querySelector('#controls').prepend( `
+  `);
+} else {
+  console.log(document.querySelector('#controls'));
+
+  document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" style="background:rgba(255,255,255,0.5)")>Wallet Connected</button>');
+}
+
+
 
 $(document).ready(function() {
   jscolor.installByClassName("jscolor");
-  randomizeColors.installByClassName("randomizeColors");
 });
 
 // var code = `<!-- Load React. -->
