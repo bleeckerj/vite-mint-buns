@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import Triplets from '../Triplets.abi.json';
+import Triplets from '../../Triplets.abi.json';
 
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page

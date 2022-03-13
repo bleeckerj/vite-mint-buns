@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/css/main.css?v=1.48" type="text/css" charset="utf-8" />
   
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="/js/jscolor.js" type="module"></script>
+    <script src="/js/jscolor.js"></script>
     <script src="/js/html2canvas.min.js"></script>
     <script src="/js/canvas2image.js"></script>
     <script src="/js/color-scheme.min.js"></script>
@@ -31,7 +31,7 @@
     <!-- define as a module for await/async -->
     <!-- this is the pattern to make module functions available for vanilla JS -->
     <script type="module">
-      import { tokenUri } from "./js/blockchain.js";
+      import { tokenUri } from "/public/js/blockchain.js";
       window.tokenUri = tokenUri;
     </script>
     <script type="module">
@@ -73,6 +73,9 @@
   
   </head>
   <body id="bbody">
+    <button id="foo"
+          class="jscolor {valueElement:'chosen-value', value:bgColor, width:485,height:300, position:'top', onFineChange:'updateBGColor(this.toHEXString())'}">Pick
+          Background Color</button>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
     <div id="buns"></div>
