@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Put Words Between Buns</title>
+
+    <meta charset="UTF-8" />
+    <meta name="title" content="Put Words Between Buns" />
+    <meta name="description" content="Create pictures of words between buns." />
+  
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Put Words Between Buns" />
+    <meta property="og:url" content="https://buns.life" />
+    <meta property="og:site_name" content="Put Words Between Buns" />
+    <meta property="og:description" content="Create pictures of words between buns." />
+  
+    <link rel="image_src" href="https://buns.life/images/site.png" />
+    <meta property="og:image" content="https://buns.life/images/site.png" />
+  
+    <link rel="stylesheet" href="css/fonts/vaultalarm.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/fonts/cartridge.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="css/main.css?v=1.48" type="text/css" charset="utf-8" />
+  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jscolor.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/canvas2image.js"></script>
+    <script src="js/color-scheme.min.js"></script>
+    <script src="js/bun.js"></script>
+    <script src="js/email.js"></script>
+    <!-- <script type="module" src="./js/test.js"></script> -->
+    <!-- define as a module for await/async -->
+    <!-- this is the pattern to make module functions available for vanilla JS -->
+    <script type="module">
+      import { tokenUri } from "./js/blockchain.js";
+      window.tokenUri = tokenUri;
+    </script>
+    <script type="module">
+      export async function contractUri() {
+          await contract.contractUri();
+      }
+      window.contractUri = contractUri;
+      // import { runAlert } from "./js/test.js";
+      // window.greetFromModule = runAlert;
+      </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123734218-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-123734218-1');
+    </script>
+  
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '133332678299132');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=133332678299132&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  
+  </head>
+  <body id="bbody">
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+    <div id="buns"></div>
+    <div id="button"></div>
+    <!-- <div id="like_button"></div> -->
+<!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
+
+  <!-- Load our React component. -->
+  <!-- <script src="js/like_button.js"></script> -->
+  </body>
+</html>

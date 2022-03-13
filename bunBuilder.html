@@ -1,0 +1,216 @@
+<html>
+
+<head>
+	<title>Put Words Between Buns</title>
+
+	<meta charset="UTF-8" />
+	<meta name="title" content="Put Words Between Buns" />
+	<meta name="description" content="Create pictures of words between buns." />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Put Words Between Buns" />
+	<meta property="og:url" content="https://buns.life" />
+	<meta property="og:site_name" content="Put Words Between Buns" />
+	<meta property="og:description" content="Create pictures of words between buns." />
+
+	<link rel="image_src" href="https://buns.life/images/site.png" />
+	<meta property="og:image" content="https://buns.life/images/site.png" />
+
+	<link rel="stylesheet" href="css/fonts/vaultalarm.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/fonts/cartridge.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="css/main.css?v=1.48" type="text/css" charset="utf-8" />
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/jscolor.js"></script>
+	<script src="js/html2canvas.min.js"></script>
+	<script src="js/canvas2image.js"></script>
+	<script src="js/color-scheme.min.js"></script>
+	<script src="js/bun.js"></script>
+	<script src="js/email.js"></script>
+	<script type="module" src="./js/test.js"></script>
+	<script type="module">
+		import { tokenUri } from "./js/test.js";
+		window.tokenUri = tokenUri;
+	</script>
+	<script type="module">
+		export async function contractUri() {
+ 		   await contract.contractUri();
+		}
+		window.contractUri = contractUri;
+		// import { runAlert } from "./js/test.js";
+		// window.greetFromModule = runAlert;
+	  </script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123734218-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-123734218-1');
+	</script>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '133332678299132');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=133332678299132&ev=PageView&noscript=1" /></noscript>
+	<!-- End Facebook Pixel Code -->
+
+</head>
+
+<body id="bbody">
+	<a name="top" />
+	<div id="container">
+		<div id="containerTop">
+			<div id="bun">
+				<div id="main">
+					<div id="bun-top"><img src="images/bun-top.png" style="width:100%;padding-bottom:.2em" /></div>
+					<div style=""><span class="hatchshow_temp"
+							style="display:block;margin-bottom:0.2em;line-height:93.5px;height:130.9px;"><span
+								class="hsjs"
+								style="color: rgb(165, 61, 24); white-space: pre; font-size: 187px; visibility: visible;">just</span></span><span
+							class="hatchshow_temp"
+							style="display:block;margin-bottom:0.2em;line-height:75.5px;height:105.69999999999999px;"><span
+								class="hsjs"
+								style="white-space: pre; font-size: 151px; visibility: visible;">start</span></span><span
+							class="hatchshow_temp"
+							style="display:block;margin-bottom:0.2em;line-height:65.5px;height:91.69999999999999px;"><span
+								class="hsjs"
+								style="white-space: pre; font-size: 131px; visibility: visible;">typing</span></span><span
+							class="hatchshow_temp"
+							style="display:block;margin-bottom:0.2em;line-height:16px;height:22.4px;"><span class="hsjs"
+								style="white-space: pre; font-size: 32px; visibility: visible;">(enter &amp; backspace
+								work)</span></span></div>
+					<div id="bun-bottom"><img src="images/bun-bottom.png" style="width:100%"></div>
+				</div>
+			</div>
+		</div>
+		<div id="containerBottom">
+			<div id="controls">
+				<div class="mobileShow">
+					<input id="mobileKeyboardKludge" type="text" value="Tap Here to Type" onfocus="keyboardFocus();">
+				</div>
+
+				<div id="colorPicker" style="text-align:center;margin:0 auto;">
+					<div>
+						<button id="bgColorPicker"
+							class="jscolor {valueElement:'chosen-value', value:bgColor, width:485,height:300, position:'top', onFineChange:'updateBGColor(this.toHEXString())'}">Pick
+							Background Color</button>
+					</div>
+					<div class="advanced">
+						<button id="bgColorPicker2"
+							class="jscolor {valueElement:'chosen-value', value:bgColor, width:485,height:300, position:'top', onFineChange:'updateBGColor2(this.toHEXString())'}">Add
+							Background Gradient</button>
+					</div>
+					<div>
+						<button id="textColorPicker"
+							class="jscolor {valueElement:'chosen-value', value:copyColor, width:485,height:300, position:'top', onFineChange:'updateTextColor(this.toHEXString())'}">Pick
+							Text Color</button>
+					</div>
+					<div class="advanced">
+						<button id="textColorPicker2"
+							class="jscolor {valueElement:'chosen-value', value:copyColor, width:485,height:300, position:'top', onFineChange:'updateTextColor2(this.toHEXString())'}">Change
+							Line Color</button>
+					</div>
+					<div id="randomizer">
+						<button style="background:rgba(255,255,255,0.5);" onclick="randomizeColors();">Randomize
+							Colors</button>
+					</div>
+					<div>
+						<button id="modeButton" style="background:rgba(255,255,255,0.5);" onclick="changeMode();"><span
+								class="emoji">&#x1F525</span> Extra Toppings</button>
+					</div>
+					<div id="downloader" style="margin-top:0.5em">
+						<button style="background:rgba(255,255,255,0.5);" onclick="renderImage();"><span
+								class="emoji">&#x1F3DE</span> Get Image</button>
+					</div>
+					<div id="sharer">
+						<button style="background:rgba(255,255,255,0.5);" onclick="shareImage();"><span
+								class="emoji">&#x1F4F2</span> Share Image</button>
+					</div>
+					<div>
+						<button style="background:rgba(255,255,255,0.5);" onclick="downloadImage();"><span
+								class="emoji">&#x2B07</span> Download Image</button>
+					</div>
+					<div>
+						<button style="background:rgba(255,255,255,0.5);" onclick="mintNFT();"><span
+								class="emoji">&#x1F4B8</span> Buy NFT</button>
+					</div>
+					<div id="like_button_container"></div>
+					<div style="margin-top:0.5em">
+				<button id="modeButton" style="background:rgba(255,255,255,0.5);" onclick="tokenUri();"><span class="emoji">&#x1F4B8</span> Buns.Life Shop</button>
+			</div>
+				</div>
+
+				<div style="margin-top:2em">
+					<div class="buttonlike" id="email-subscribed" style="display:none">
+						<div>Welcome to the Buns Life.</div>
+					</div>
+					<div id="email-subscribe-form">
+						<div>
+							<input type="email" value="" class="subscribe" id="email" placeholder="Enter email address"
+								required onfocus="pause();" onblur="resume();">
+						</div>
+						<div>
+							<button id="email-signup-button" onClick="emailSignup()">
+								Join the Buns Life
+							</button>
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+					<a href="http://twitter.com/ibogost">Ian Bogost</a> made this, for <a
+						href="http://bogost.com/projects/buns-life/">some reason</a>. Put words between buns.
+				</div>
+			</div>
+
+			<div style="text-align:center;margin-bottom:1em">
+				<!-- AddToAny BEGIN -->
+				<div class="a2a_kit a2a_kit_size_64 a2a_default_style"
+					style="width:300px;text-align:center;margin-left:auto;margin-right:auto;">
+					<!--a class="a2a_dd" href="https://www.addtoany.com/share"></a-->
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_twitter"></a>
+					<a class="a2a_button_pinterest"></a>
+					<a class="a2a_button_email"></a>
+				</div>
+				<script>
+					var a2a_config = a2a_config || {};
+					a2a_config.onclick = 1;
+					a2a_config.num_services = 4;
+				</script>
+				<script async src="https://static.addtoany.com/menu/page.js"></script>
+				<!-- AddToAny END -->
+			</div>
+		</div>
+
+		<div style="text-align:right;margin-left:10px;margin-right:10px;font-size:8pt;font-family:sans-serif;"><a
+				href="/shop/privacy.html">Privacy Policy</a> - <a href="/shop/terms.html">Terms of Service</a> - &copy;
+			Persuasive Games LLC - DEV</div>
+	</div>
+
+<!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="js/mint_button.js"></script>
+
+
+</body>
+
+</html>

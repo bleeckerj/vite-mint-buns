@@ -1,0 +1,49 @@
+import { ethers } from "ethers";
+import Triplets from '../Triplets.abi.json';
+
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
+const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+// MetaMask requires requesting permission to connect users accounts
+await provider.send("eth_requestAccounts", []);
+
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
+// For this, you need the account signer...
+const signer = provider.getSigner()
+console.log(signer);
+const contractAddress = '0x9fcEF82DAe1a4144cc327237eDb9aC928D1eC1Df';
+
+// get the smart contract
+const contract = new ethers.Contract(contractAddress, Triplets, signer);
+console.log(contract);
+let promises = [];
+let uriPrefix = await contract.uriPrefix()
+let tripletsJSON = [];
+let tripletsJSON_O = new Map();
+console.log(uriPrefix);
+
+// export function runAlert() {
+//     alert("ALERT!");
+// }
+// window.runAlert = () => {
+//     const uri = await contract.tokenURI(tokenId);
+//     alert(uri); 
+//     //alert("Go Away!");
+// };
+
+// window.contractUri = () => {
+//     const uri = await contract.tokenURI(tokenId);
+//     alert(uri); 
+// };
+
+export async function tokenUri() {
+    const uri = await contract.tokenURI(3);
+    alert(uri);
+}
+
+// window.wtf = () => {
+//     const uri = await contract.tokenURI(tokenId);
+//     alert(uri); 
+// }
