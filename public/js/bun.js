@@ -156,7 +156,7 @@ function randomizeColors() {
 		updateBGColor2('#'+bg2);
 		//updateTextColor('#'+textCol);
 		//updateTextColor2('#'+textCol);
-
+		console.log(document);
 		document.getElementById('bgColorPicker').jscolor.fromString('#'+bg1);
 		document.getElementById('bgColorPicker').jscolor.fromString('#'+bg2);
 		document.getElementById('textColorPicker').jscolor.fromString('#'+textCol);

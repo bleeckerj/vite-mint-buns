@@ -144,6 +144,11 @@ document.querySelector('#mint_a_bun').innerHTML = `
 class="emoji">&#x1F4B8</span>Mint Bun</button>
 `
 
+$(document).ready(function() {
+  jscolor.installByClassName("jscolor");
+  randomizeColors.installByClassName("randomizeColors");
+});
+
 // var code = `<!-- Load React. -->
 // <!-- Note: when deploying, replace 'development.js' with 'production.min.js'. -->
 // <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
