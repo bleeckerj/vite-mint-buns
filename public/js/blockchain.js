@@ -29,6 +29,8 @@ export async function connectWallet() {
     // For this, you need the account signer...
     const signer = provider.getSigner()
     console.log(signer);
+    console.log(Triplets);
+    
     const contractAddress = '0x9fcEF82DAe1a4144cc327237eDb9aC928D1eC1Df';
     
     // get the smart contract
@@ -63,20 +65,41 @@ export async function isUnlocked() {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
 
     let unlocked;
-
+    console.log("isUnlocked?");
+    
     try {
         const accounts = await provider.listAccounts();
-
+        console.log(accounts);
         unlocked = accounts.length > 0;
+        console.log(accounts.length);
+        console.log(unlocked);
     } catch (e) {
         unlocked = false;
     }
-    console.log(unlocked);
     return unlocked;
 }
 
 export async function tokenUri() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    await provider.send("eth_requestAccounts", []);
+
+    // MetaMask requires requesting permission to connect users accounts
+    //await provider.send("eth_requestAccounts", []);
+    
+    // The MetaMask plugin also allows signing transactions to
+    // send ether and pay to change state within the blockchain.
+    // For this, you need the account signer...
+    const signer = provider.getSigner()
+    console.log(signer);
+    console.log(Triplets);
+    
+    const contractAddress = '0x9fcEF82DAe1a4144cc327237eDb9aC928D1eC1Df';
+    
+    // get the smart contract
+    const contract = new ethers.Contract(contractAddress, Triplets, signer);
+    console.log(contract);
     const uri = await contract.tokenURI(3);
+    console.log(uri);
     alert(uri);
 }
 

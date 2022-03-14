@@ -1,3 +1,4 @@
+import { isUnlocked } from './public/js/blockchain'
 import './style.css'
 
 // document.querySelector('#app').innerHTML = `
@@ -146,18 +147,39 @@ document.querySelector('#mint_a_bun').innerHTML = `
 <button style="background:rgba(255,255,255,0.5);" onclick="window.tokenUri();"><span
 class="emoji">&#x1F4B8</span>Mint Bun</button>
 `
-if (isUnlocked() === false) {
-  console.log(document.querySelector('#controls'));
 
-  document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" onClick="checkConnection();">Connect Wallet</button>');
+var x = isUnlocked();
+x.then(function(value) {
+  console.log(value);
+  console.log("That was value");
+  if (value == false) {
+    console.log("Wallet is not connected");
+    console.log(document.querySelector('#controls'));
 
-  document.querySelector('#controls').prepend( `
-  `);
-} else {
-  console.log(document.querySelector('#controls'));
+    document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" onClick="checkConnection();">Connect Wallet</button>');
+  
+  } else {
+    console.log("Wallet is connected");
+    console.log(document.querySelector('#controls'));
 
-  document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" style="background:rgba(255,255,255,0.5)")>Wallet Connected</button>');
-}
+    document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" style="background:rgba(255,255,255,0.5)")>Wallet Connected</button>');
+  
+  }
+});
+
+console.log(x);
+console.log("HELLO?");
+
+// if (isUnlocked() == false) {
+//   console.log(document.querySelector('#controls'));
+
+//   document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" onClick="checkConnection();">Connect Wallet</button>');
+
+// } else {
+//   console.log(document.querySelector('#controls'));
+
+//   document.querySelector('#controls').insertAdjacentHTML("afterbegin", '<button id="connectWallet" style="background:rgba(255,255,255,0.5)")>Wallet Connected</button>');
+// }
 
 
 
